@@ -1,3 +1,68 @@
+# Hackmas-HackMars-2.0: 🍪 Cookie Tin
+
+This project was created for the [Hackmas-HackMars-2.0](https://hackmars-2.devpost.com/) 2025 hackathon.
+
+---
+
+## Track Selection
+
+### (Own Choice) Christmas-themed project
+
+**Cookie Tin** is designed to help users track overconsumption and overspending during the happy holiday season. Built for speed and transparency, it turns the "stress of shopping" into a manageable and interactive experience.
+
+### Team Members (Solo Project)
+
+1. Juana Wong - [wong-ja](https://github.com/wong-ja)
+
+### Deployment
+
+Deployed [here]()
+
+---
+
+## Description
+
+### Problem
+
+Christmas holiday shopping. Easy to forget consequences. 
+
+Track:
+- [ ] overconsumption (food)
+- [ ] overspending ($)
+
+App idea:
+- simple, aesthetically nice app
+- input constraints (eg. select/specify constraints for this holiday season)
+  - select holidays (with default/inbuilt date ranges)
+  - custom range (date picker)
+  - budget (number limit)
+- users will input what they paid for ($ amounts), or foods purchased (barcode/nutrition scanner)
+- quick analysis of overconsumption or overspending
+- cute holiday-themed graphics for ranges [in the clear & good / tricky... careful... reaching the limit / code RED! stop now!]
+- dashboard to track previous sessions?
+
+### User
+
+Anyone who shops for holiday season.
+
+### Solution (what it does + why it matters)
+
+Helps people become more transparent, accountable, financially responsible. For independent users or big families celebrating the wintry holiday season.
+
+---
+
+## Demo Video (3–5 min)
+
+show the user journey and working features.
+
+---
+
+## Usage / Installation / Tech Stack / Etc.
+
+...
+
+---
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
