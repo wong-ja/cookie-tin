@@ -6,7 +6,7 @@ This project was created for the [Hackmas-HackMars-2.0](https://hackmars-2.devpo
 
 ## Track Selection
 
-### (Own Choice) Christmas-themed project
+### (Own Choice) 🎄 Christmas-themed project
 
 **Cookie Tin** is designed to help users track overconsumption and overspending during the happy holiday season. Built for speed and transparency, it turns the "stress of shopping" into a manageable and interactive experience.
 
@@ -20,15 +20,75 @@ Deployed [here]()
 
 ---
 
-## Description
+## Problem Description
 
-### Problem
+### Christmas holiday shopping. Easy-to-forget consequences. 
 
-Christmas holiday shopping. Easy to forget consequences. 
+Christmas holiday shopping often leads to "Holiday Amnesia" -- where we lose track of the cumulative effect of multiple purchases and spending sprees.
 
-Track:
-- [ ] overconsumption (food)
-- [ ] overspending ($)
+
+🍪 **Cookie Tin** 🍪 tracks:
+- 🍫 **overconsumption** (through food barcodes) -- to help you stay on top of your holiday health goals
+- 🎁 **overspending** (through $-budgets) -- to help you manage your expenses with a set holiday budget
+
+
+---
+
+## Tech Stack
+
+- **Framework:** Next.js 15
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **Icons:** Lucide React
+- **Scanning:** Html5-QRCode API
+- **Database:** LocalStorage 
+  - Privacy-focused, no account needed
+
+---
+
+## Features
+
+### 1. The "Tin" Engine
+- **Multi-Year Sessions:** Archive previous holiday sessions (eg. "Christmas 2024") and start fresh for 2025.
+- **Smart Budgets:** Set a monetary limit and monitor your spending spree, as the UI transitions from **Emerald Green** to **Code Red**.
+
+### 2. Cookie Scanner
+- **Barcode Scanner:** Uses the **Open Food Facts API** to identify snacks and foods you've purchased.
+- **Nutrition Awareness:** Displays calorie information before you log the item.
+
+### 3. Visual Dashboard
+- **History Tracking:** Revisit previous holiday sessions to compare spending habits over time.
+- **Holiday Aesthetics:** A simple, warm "Cookie-themed" app to match the festive holiday spirit!
+
+---
+
+## Installation & Setup
+
+1. Clone the app and install
+
+```
+git clone https://github.com/wong-ja/cookie-tin.git
+```
+
+```
+npm install
+```
+
+2. Run the app
+
+```
+npm run dev
+```
+
+- access the app on `http://localhost:3000/`
+
+---
+
+## Next Steps:
+
+
+
+---
 
 App idea:
 - simple, aesthetically nice app
