@@ -59,13 +59,14 @@ Christmas holiday shopping often leads to "Holiday Amnesia" -- where we lose tra
 
 ## Tech Stack
 
-- **Framework:** Next.js 15
+- **Framework:** Next.js 15 (App Router)
 - **Language:** TypeScript
 - **Styling:** Tailwind CSS
 - **Icons:** Lucide React
 - **Scanning:** Html5-QRCode API
+- **Feedback**: Canvas-Confetti & Browser Vibration API
 - **Database:** LocalStorage 
-  - Privacy-focused, no account needed
+  - Privacy-focused, no user data collected/stored, no account needed
 
 ---
 
@@ -82,6 +83,8 @@ Christmas holiday shopping often leads to "Holiday Amnesia" -- where we lose tra
 ### 3. Visual Dashboard
 - **History Tracking:** Revisit previous holiday sessions to compare spending habits over time.
 - **Holiday Aesthetics:** A simple, warm "Cookie-themed" app to match the festive holiday spirit!
+- **Guilt Guard**: Prompts confirmation if a new item exceeds the remaining budget/spending limit.
+- **Social Media Sharing**: Export your holiday "Report Card" to social media platforms!
 
 ---
 
@@ -111,6 +114,6 @@ npm run dev
 
 - [ ] Track spending for specific individuals or groups, with "Gift Receipts" and "Lists" 
 - [ ] Shared Tins to sync group/family spending budgets between multiple family members or individuals (using cloud database)
-- [ ] Share **Cookie Tins** & export session data to social media platforms or to PDF/CSV
+- [x] Share **Cookie Tins** & export session data to social media platforms or to PDF/CSV
 - [ ] ...
 
