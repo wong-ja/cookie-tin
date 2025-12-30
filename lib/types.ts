@@ -9,9 +9,13 @@ export interface Expense {
 export interface TinSession {
     id: string;
     holidayName: string;
-    year: number;
+    customName?: string;
+    date: string;
     budget: number;
     calorieLimit: number;
+    currency: string;
     items: Expense[];
+    customBg?: string;
+    timestamp: number;
     isClosed: boolean;
 }
