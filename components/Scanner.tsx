@@ -35,7 +35,7 @@ export default function Scanner({ onScan, onClose }: { onScan: (res: string) => 
                 {/* header */}
                 <div className="flex justify-between items-center p-5">
                     <div>
-                        <h3 className="font-black text-rose-600 text-lg leading-none">COOKIE SCAN</h3>
+                        <h3 className="font-black text-rose-600 text-lg leading-none">SCAN BARCODE</h3>
                         <p className="text-[10px] text-gray-400 font-bold tracking-widest uppercase mt-1">Nutrition Tracker</p>
                     </div>
                     <button 
