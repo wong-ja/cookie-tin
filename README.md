@@ -2,18 +2,6 @@
 
 This project was created for the [Hackmas-HackMars-2.0](https://hackmars-2.devpost.com/) 2025 hackathon.
 
----
-
-App idea:
-- input constraints (eg. select/specify constraints for this holiday season)
-  - select holidays (with default/inbuilt date ranges)
-  - custom range (date picker)
-  - budget (number limit)
-- users will input what they paid for ($ amounts), or foods purchased (barcode/nutrition scanner)
-- quick analysis of overconsumption or overspending
-- cute holiday-themed graphics for ranges [in the clear & good / tricky... careful... reaching the limit / code RED! stop now!]
-- dashboard to track previous sessions?
-
 
 ---
 
@@ -50,10 +38,13 @@ Christmas holiday shopping often leads to "Holiday Amnesia" -- where we lose tra
 
 ***Cookie Tin** helps people become more transparent, accountable, fiscally responsible. For individuals & families celebrating and spending for the wintry holiday season.*
 
-🍪 **Cookie Tin** 🍪 tracks:
+### Cookie Tin 🍪 tracks:
 - 🍫 **overconsumption** (through food barcodes) -- to help you stay on top of your holiday health goals
 - 🎁 **overspending** (through $-budgets) -- to help you manage your expenses with a set holiday budget
 
+### Users
+
+- Anyone shopping for the holiday season!
 
 ---
 
