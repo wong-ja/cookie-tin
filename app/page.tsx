@@ -75,7 +75,8 @@ export default function CookieTinApp() {
           <div className="inline-block p-4 bg-orange-100 rounded-full text-orange-600 mb-4">
             <Cookie size={48} strokeWidth={1.5} />
           </div>
-          <h2 className="text-3xl font-black italic text-gray-900 mb-8 uppercase tracking-tight">New Session</h2>
+          <h2 className="text-3xl font-black italic text-gray-900 mb-2 uppercase tracking-tight">Cookie Tin</h2>
+          <p className="text-1 font-black italic text-orange-300 mb-8 uppercase tracking-tight">New Session</p>
           
           <form onSubmit={(e) => {
             e.preventDefault();

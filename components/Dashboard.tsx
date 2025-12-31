@@ -186,7 +186,50 @@ export default function Dashboard({ session, onUpdate, onBack }: {
         return "bg-emerald-400";
     };
 
-    const headerBg = spendRatio >= 1 ? 'bg-gray-900/95' : spendRatio >= 0.8 ? 'bg-rose-900/90' : 'bg-emerald-900/90';
+    const headerBg =
+        spendRatio >= 1.0
+            ? 'bg-gradient-to-r from-rose-900 via-red-600 to-rose-700'
+        : spendRatio >= 0.9
+            ? 'bg-gradient-to-r from-rose-800 via-orange-600 to-rose-600'
+        : spendRatio >= 0.80
+            ? 'bg-gradient-to-r from-amber-700 via-orange-600 to-rose-500'
+        : spendRatio >= 0.65
+            ? 'bg-gradient-to-r from-amber-600 via-orange-600 to-lime-500'
+        : spendRatio >= 0.45
+            ? 'bg-gradient-to-r from-lime-600 via-amber-700 to-emerald-500'
+        : spendRatio >= 0.25
+            ? 'bg-gradient-to-r from-lime-600 via-teal-700 to-emerald-500'
+        : spendRatio >= 0.15
+            ? 'bg-gradient-to-r from-emerald-700 via-teal-700 to-emerald-500'
+            : 'bg-gradient-to-r from-teal-800 via-emerald-700 to-emerald-500';
+
+    const patterns = [
+        'bg-[radial-gradient(circle_at_15%_25%,rgba(244,63,94,0.25)_3px,transparent_0),radial-gradient(circle_at_75%_35%,rgba(59,130,246,0.25)_4px,transparent_0),radial-gradient(circle_at_45%_75%,rgba(251,191,36,0.3)_3px,transparent_0)] ' +
+        'bg-[length:40px_40px] border-amber-200/50',
+
+        'bg-[radial-gradient(circle_at_30%_15%,rgba(168,85,247,0.2)_4px,transparent_0),radial-gradient(circle_at_80%_60%,rgba(20,184,166,0.2)_3px,transparent_0),radial-gradient(circle_at_20%_80%,rgba(249,115,22,0.25)_4px,transparent_0)] ' +
+        'bg-[length:45px_45px] border-rose-200/50',
+
+        'bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.2)_3px,transparent_0),radial-gradient(circle_at_10%_10%,rgba(251,191,36,0.3)_2px,transparent_0),radial-gradient(circle_at_90%_90%,rgba(251,191,36,0.3)_2px,transparent_0)] ' +
+        'bg-[length:35px_35px] border-blue-200/50',
+
+        'bg-[radial-gradient(circle_at_15%_25%,rgba(244,63,94,0.25)_3px,transparent_0),radial-gradient(circle_at_75%_35%,rgba(59,130,246,0.25)_4px,transparent_0),radial-gradient(circle_at_45%_75%,rgba(251,191,36,0.3)_3px,transparent_0)] ' +
+        'bg-[length:40px_40px] border-amber-200/50',
+
+        'bg-[radial-gradient(circle_at_20%_20%,rgba(52,211,153,0.2)_5px,transparent_0),radial-gradient(circle_at_80%_80%,rgba(251,146,60,0.2)_4px,transparent_0),radial-gradient(circle_at_50%_10%,rgba(251,113,133,0.2)_3px,transparent_0)] ' +
+        'bg-[length:60px_60px] border-emerald-100/50',
+
+        'bg-[radial-gradient(circle_at_10%_10%,rgba(251,191,36,0.3)_3px,transparent_0),radial-gradient(circle_at_90%_10%,rgba(217,119,6,0.15)_5px,transparent_0),radial-gradient(circle_at_50%_90%,rgba(254,243,199,0.5)_4px,transparent_0)] ' +
+        'bg-[length:45px_45px] border-yellow-300/40',
+    ];
+
+    const key = session.holidayName ?? 'default';
+    let hash = 0;
+    for (let i = 0; i < key.length; i++) {
+        hash = (hash + key.charCodeAt(i)) % 1000;
+    }
+    const index = hash % patterns.length;
+    const borderBg = patterns[index];
 
     const CELEBRATION_SAYINGS = [
         "Perfectly Balanced!",
@@ -203,7 +246,7 @@ export default function Dashboard({ session, onUpdate, onBack }: {
     ];
 
     return (
-        <div className="min-h-screen pb-32 bg-[#FFF9F0] transition-colors duration-700 overflow-x-hidden relative">
+        <div className={`min-h-screen pb-32 ${borderBg} transition-colors duration-700 overflow-x-hidden relative`}>
             
             {/* CELEBRATION */}
             {showCelebration && (
@@ -339,7 +382,7 @@ export default function Dashboard({ session, onUpdate, onBack }: {
                         <p className="text-[10px] font-black uppercase tracking-[0.2em] opacity-70 mb-1">
                             {remainingBudget < 0 ? "Over Limit" : "Remaining to Spend"}
                         </p>
-                        <div className={`text-6xl font-black tabular-nums transition-colors duration-500 ${remainingBudget < 0 ? "text-rose-400" : "text-emerald-400"}`}>
+                        <div className={`text-6xl font-black tabular-nums transition-colors duration-500 ${remainingBudget < 0 ? "text-rose-300" : "text-emerald-300"}`}>
                             {remainingBudget >= 0 ? "+" : "-"}{session.currency}{Math.abs(remainingBudget).toFixed(2)}
                         </div>
                     </div>
@@ -347,7 +390,7 @@ export default function Dashboard({ session, onUpdate, onBack }: {
                     <div className="space-y-6">
                         <div className="space-y-2">
                             <div className="flex justify-between text-[10px] font-black uppercase tracking-widest">
-                                <span className="opacity-70">Budget Progress</span>
+                                <span className="opacity-70">Budget Limit</span>
                                 <span>{session.currency}{totalSpent.toFixed(0)} / {session.currency}{session.budget}</span>
                             </div>
                             <div className="h-3 bg-white/10 rounded-full overflow-hidden border border-white/10 p-0.5">
@@ -356,7 +399,7 @@ export default function Dashboard({ session, onUpdate, onBack }: {
                         </div>
                         <div className="space-y-2">
                             <div className="flex justify-between text-[10px] font-black uppercase tracking-widest">
-                                <span className="opacity-70">Treat Calories</span>
+                                <span className="opacity-70">Total Calories</span>
                                 <span>{totalCals} / {session.calorieLimit} kcal</span>
                             </div>
                             <div className="h-3 bg-white/10 rounded-full overflow-hidden border border-white/10 p-0.5">
