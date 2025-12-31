@@ -155,9 +155,7 @@ export default function CookieTinApp() {
                     </button>
                     <button 
                       onClick={() => {
-                        if(confirm("Delete this tin?")) {
-                          saveAndSync(sessions.filter(sess => sess.id !== s.id));
-                        }
+                        saveAndSync(sessions.filter(sess => sess.id !== s.id));
                       }}
                       className="p-4 text-gray-400 hover:text-rose-500 transition-colors"
                     >
