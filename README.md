@@ -64,26 +64,23 @@ Christmas holiday shopping often leads to "Holiday Amnesia" -- where we lose tra
 - **Styling:** Tailwind CSS
 - **Icons:** Lucide React
 - **Scanning:** Html5-QRCode API
-- **Feedback**: Canvas-Confetti & Browser Vibration API
-- **Database:** LocalStorage 
+- **Feedback/Haptics**: Canvas-Confetti & Web Vibration API
+- **Database:** LocalStorage (Browser)
   - Privacy-focused, no user data collected/stored, no account needed
 
 ---
 
 ## Features
-
-### 1. The "Tin" Engine
-- **Multi-Year Sessions:** Archive previous holiday sessions (eg. "Christmas 2024") and start fresh for 2025.
-- **Smart Budgets:** Set a monetary limit and monitor your spending spree, as the UI transitions from **Emerald Green** to **Code Red**.
-
-### 2. Cookie Scanner
-- **Barcode Scanner:** Uses the **Open Food Facts API** to identify snacks and foods you've purchased.
+- **Multi-Year Sessions:** Archive previous holiday sessions (eg. "Christmas 2025") and start fresh for every upcoming holiday (eg. Christmas 2026).
+- **Dual-Limit Budgeting:** Set monetary and calorie limits, and monitor your spending spree with responsive UI transitions as you add items to the session.
+- **Holiday Counntdown**: Automatic & daily countdowns as you get closer to the selected holiday.
+- **Barcode Scanning:** Uses the **Open Food Facts API** to identify snacks and foods you've purchased.
 - **Nutrition Awareness:** Displays calorie information before you log the item.
-
-### 3. Visual Dashboard
-- **History Tracking:** Revisit previous holiday sessions to compare spending habits over time.
+- **Haptic Feedback**: Generates a randomized "Success" celebration with physical vibration and festive UI patterns, or a warning "Puzzle" if new items exceed the holiday limits.
+- **Guilt Guard**: Generates a warning "Puzzle" that users must solve, if they want to add new items that exceed the holiday budget/calorie limits. 
+- **History Tracking:** Manage multiple "Tins" at once with the ability to archive, revisit, or delete past holiday sessions, and to compare spending habits over time.
 - **Holiday Aesthetics:** A simple, warm "Cookie-themed" app to match the festive holiday spirit!
-- **Guilt Guard**: Prompts confirmation if a new item exceeds the remaining budget/spending limit.
+- **Visual Progress Insights**: Dynamic progress bars that shift from festive to warning, as you approach your tin's capacity.
 - **Social Media Sharing**: Export your holiday "Report Card" to social media platforms!
 
 ---
@@ -114,6 +111,6 @@ npm run dev
 
 - [ ] Track spending for specific individuals or groups, with "Gift Receipts" and "Lists" 
 - [ ] Shared Tins to sync group/family spending budgets between multiple family members or individuals (using cloud database)
-- [x] Share **Cookie Tins** & export session data to social media platforms or to PDF/CSV
+- [x] Share **Cookie Tins** & export session data to social media platforms
 - [ ] ...
 
