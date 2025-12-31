@@ -30,6 +30,7 @@ export default function Dashboard({ session, onUpdate, onBack }: {
     const [amount, setAmount] = useState("");
     const [manualCals, setManualCals] = useState("");
     const [searchTerm, setSearchTerm] = useState("");
+    const [currentSaying, setCurrentSaying] = useState("");
     const [isScanning, setIsScanning] = useState(false);
     const [isSettingsOpen, setIsSettingsOpen] = useState(false);
     const [showCelebration, setShowCelebration] = useState(false);
@@ -81,6 +82,8 @@ export default function Dashboard({ session, onUpdate, onBack }: {
 
     const triggerCelebration = () => {
         if (showCelebration) return;
+        const randomSaying = CELEBRATION_SAYINGS[Math.floor(Math.random() * CELEBRATION_SAYINGS.length)];
+        setCurrentSaying(randomSaying);
         setShowCelebration(true);
         triggerHaptic('success');
         setTimeout(() => setShowCelebration(false), 2000);
@@ -185,6 +188,20 @@ export default function Dashboard({ session, onUpdate, onBack }: {
 
     const headerBg = spendRatio >= 1 ? 'bg-gray-900/95' : spendRatio >= 0.8 ? 'bg-rose-900/90' : 'bg-emerald-900/90';
 
+    const CELEBRATION_SAYINGS = [
+        "Perfectly Balanced!",
+        "You're a smart cookie!",
+        "On track for spending!",
+        "Festive & Focused!",
+        "Budget Master!",
+        "Sweet Success!",
+        "Baking it look easy!",
+        "Batching it like a pro!",
+        "Tin-tastic progress!",
+        "A treat-wise choice!",
+        "The perfect portion!"
+    ];
+
     return (
         <div className="min-h-screen pb-32 bg-[#FFF9F0] transition-colors duration-700 overflow-x-hidden relative">
             
@@ -192,8 +209,8 @@ export default function Dashboard({ session, onUpdate, onBack }: {
             {showCelebration && (
                 <div className="fixed inset-0 z-201 pointer-events-none flex items-center justify-center bg-white/10 backdrop-blur-[1px] animate-in fade-in duration-100">
                     <div className="text-center scale-110">
-                        <h2 className="text-6xl font-black italic text-orange-600 drop-shadow-2xl uppercase tracking-tighter">
-                            On Track!
+                        <h2 className="text-5xl font-black italic text-amber-500 drop-shadow-2xl uppercase tracking-tighter">
+                            ✨{currentSaying}✨
                         </h2>
                     </div>
                 </div>
