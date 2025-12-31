@@ -22,11 +22,13 @@ This project was created for the [Hackmas-HackMars-2.0](https://hackmars-2.devpo
 
 ### Deployment 
 
-> Deployed [here]()
+- [https://cookie-tin.vercel.app/](https://cookie-tin.vercel.app/)
 
 ### Demo 
 
-> show the user journey and working features.
+[![Watch the demo](public\cookie-tin.png)](https://youtu.be/n-Y6PBwerhI)
+
+- Or watch the [MP4](public\cookie-tin.mp4).
 
 ---
 
